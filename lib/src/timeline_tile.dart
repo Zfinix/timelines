@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -116,7 +115,7 @@ class TimelineTile extends StatelessWidget {
             alignment: direction == Axis.vertical
                 ? AlignmentDirectional.centerEnd
                 : Alignment.bottomCenter,
-            child: oppositeContents ?? SizedBox.shrink(),
+            child: oppositeContents ?? const SizedBox.shrink(),
           ),
         ),
       ConstrainedBox(
@@ -133,12 +132,12 @@ class TimelineTile extends StatelessWidget {
             alignment: direction == Axis.vertical
                 ? AlignmentDirectional.centerStart
                 : Alignment.topCenter,
-            child: contents ?? SizedBox.shrink(),
+            child: contents ?? const SizedBox.shrink(),
           ),
         ),
     ];
 
-    var result;
+    Widget result;
     switch (direction) {
       case Axis.vertical:
         result = Row(

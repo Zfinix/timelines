@@ -6,7 +6,7 @@ repository: https://github.com/chulwoo-park/timelines/
 issue_tracker: https://github.com/chulwoo-park/timelines/issues
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=3.0.0 <4.0.0"
   flutter: '>=1.17.0'
 
 dependencies:
@@ -16,6 +16,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  pedantic: ^1.11.0
+  flutter_lints: any
 
 flutter: 

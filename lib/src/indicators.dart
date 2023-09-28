@@ -160,12 +160,13 @@ class ContainerIndicator extends Indicator {
   /// The widget below this widget in the tree.
   ///
   /// {@macro flutter.widgets.child}
+  @override
   final Widget? child;
 
   @override
   Widget build(BuildContext context) {
     final size = getEffectiveSize(context);
-    return Container(
+    return SizedBox(
       width: size,
       height: size,
       child: child,
@@ -193,11 +194,13 @@ class DotIndicator extends Indicator {
         );
 
   /// The border to use when drawing the dot's outline.
+  @override
   final BoxBorder? border;
 
   /// The widget below this widget in the tree.
   ///
   /// {@macro flutter.widgets.child}
+  @override
   final Widget? child;
 
   @override
@@ -208,12 +211,12 @@ class DotIndicator extends Indicator {
       child: Container(
         width: effectiveSize ?? ((child == null) ? 15.0 : null),
         height: effectiveSize ?? ((child == null) ? 15.0 : null),
-        child: child,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: effectiveColor,
           border: border,
         ),
+        child: child,
       ),
     );
   }
@@ -252,6 +255,7 @@ class OutlinedDotIndicator extends Indicator {
   /// The widget below this widget in the tree.
   ///
   /// {@macro flutter.widgets.child}
+  @override
   final Widget? child;
 
   @override

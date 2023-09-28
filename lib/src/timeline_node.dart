@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import 'connectors.dart';
 import 'indicators.dart';
@@ -74,10 +73,10 @@ class TimelineNode extends StatelessWidget with TimelineTileNode {
                 )
               : null,
           indicator: DotIndicator(
-            child: indicatorChild,
             position: indicatorPosition,
             size: indicatorSize,
             color: color,
+            child: indicatorChild,
           ),
           indicatorPosition: indicatorPosition,
           position: nodePosition,
@@ -137,13 +136,13 @@ class TimelineNode extends StatelessWidget with TimelineTileNode {
       if (indicatorFlex > 0)
         Flexible(
           flex: (indicatorFlex * kFlexMultiplier).toInt(),
-          child: startConnector ?? TransparentConnector(),
+          child: startConnector ?? const TransparentConnector(),
         ),
       if (!overlap) indicator,
       if (indicatorFlex < 1)
         Flexible(
           flex: ((1 - indicatorFlex) * kFlexMultiplier).toInt(),
-          child: endConnector ?? TransparentConnector(),
+          child: endConnector ?? const TransparentConnector(),
         ),
     ];
 
@@ -169,12 +168,12 @@ class TimelineNode extends StatelessWidget with TimelineTileNode {
         if (indicatorFlex > 0)
           Flexible(
             flex: (indicatorFlex * kFlexMultiplier).toInt(),
-            child: TransparentConnector(),
+            child: const TransparentConnector(),
           ),
         indicator,
         Flexible(
           flex: ((1 - indicatorFlex) * kFlexMultiplier).toInt(),
-          child: TransparentConnector(),
+          child: const TransparentConnector(),
         ),
       ];
 
